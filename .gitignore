@@ -1,0 +1,10 @@
+# File di sistema
+.DS_Store
+Thumbs.db
+
+# Configurazioni locali di VS Code
+.vscode/
+
+# Eventuali file temporanei di Python (ci serviranno dopo)
+__pycache__/
+*.pyc

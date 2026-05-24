@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Portichetto | Appartamento Esclusivo a Pescara</title>
+    <!-- CSS di Flatpickr + Tema Scuro -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. HEADER & NAVIGAZIONE (Su mobile diventerà un menu compatto) -->
+    <header class="main-header">
+        <a href="#" class="logo">Il Tuo B&B</a>
+        <nav class="nav-menu">
+            <a href="#appartamento">La Casa</a>
+            <a href="#servizi">Servizi</a>
+            <a href="#posizione">Dove Siamo</a>
+            <a href="#prenota" class="btn-nav">Prenota Ora</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- COPERTINA (HERO SECTION) CON TRE FOTO DI SFONDO -->
+    <section class="hero">
+        <!-- Contenitore delle immagini locali -->
+        <div class="hero-bg">
+            <img src="img/IMG-20250228-WA0055.jpg" alt="Anteprima appartamento 1">
+            <img src="img/IMG-20240410-WA0039.jpg" alt="Anteprima appartamento 2">
+            <img src="img/IMG_20241228_101602.jpg" alt="Anteprima appartamento 3">
+        </div>
+        
+        <!-- Filtro scuro per rendere il testo leggibile sopra le foto -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Testo sopra lo sfondo -->
+        <div class="hero-content">
+            <h1>Il tuo rifugio nel cuore di Pescara</h1>
+            <p>Un appartamento moderno e accogliente, pensato per farti sentire a casa.</p>
+            <a href="#prenota" class="btn-primary">Vedi Disponibilità</a>
+        </div>
+    </section>
+
+        <!-- 3. L'APPARTAMENTO & DETTAGLI -->
+        <section id="appartamento" class="container">
+            <h2>L'Appartamento</h2>
+            <p class="subtitle">Spazi luminosi, comfort moderni e cura nei dettagli.</p>
+            
+            <div class="features-grid">
+                <div class="feature-item"><strong>Ospiti:</strong> Fino a 4 persone</div>
+                <div class="feature-item"><strong>Spazio:</strong> 65 mq</div>
+                <div class="feature-item"><strong>Camere:</strong> 1 Matrimoniale + Divano Letto</div>
+            </div>
+
+            <div class="gallery-placeholder">
+                <!-- Qui inseriremo i tag <img> reali -->
+                <div class="photo-card">Foto 1 - Soggiorno</div>
+                <div class="photo-card">Foto 2 - Camera</div>
+                <div class="photo-card">Foto 3 - Bagno</div>
+            </div>
+        </section>
+
+        <!-- 4. I SERVIZI INCLUSI -->
+        <section id="servizi" class="bg-light">
+            <div class="container">
+                <h2>I Servizi Inclusi</h2>
+                <div class="services-grid">
+                    <div class="service-card">🌐 Wi-Fi Fibra</div>
+                    <div class="service-card">❄️ Aria Condizionata</div>
+                    <div class="service-card">☕ Macchina Caffè</div>
+                    <div class="service-card">🍳 Cucina Attrezzata</div>
+                    <div class="service-card">🧼 Lenzuola e Asciugamani</div>
+                    <div class="service-card">📺 Smart TV</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. POSIZIONE -->
+        <section id="posizione" class="container">
+            <h2>Dove Siamo</h2>
+            <p>Ci troviamo in Via Roma 12, in una zona tranquilla ma strategica.</p>
+            <ul>
+                <li>🚶‍♂️ 5 minuti a piedi dal centro storico</li>
+                <li>Directions 🚌 Fermata dell'autobus a 50 metri</li>
+                <li>🛒 Supermercato aperto 24/7 girato l'angolo</li>
+            </ul>
+        </section>
+
+        <!-- 6. CALENDARIO E FORM DI PRENOTAZIONE -->
+        <section id="prenota" class="bg-dark text-white">
+            <div class="container booking-section">
+                <h2>Verifica Disponibilità e Prenota Direct</h2>
+                <p>I giorni in grigio sono già occupati su Booking.com. Seleziona le date libere e inviaci una richiesta senza impegno!</p>
+                
+                <div class="booking-wrapper">
+                    <!-- Placeholder per il Calendario Dinamico -->
+                    <!-- Il calendario si genererà dentro questo div vuoto -->
+                    <div id="calendar-inline"></div>
+
+                    <!-- Modulo di contatto -->
+                    <form id="request-form">
+                        <input type="text" placeholder="Il tuo Nome" required>
+                        <input type="email" placeholder="La tua Email" required>
+                        <div class="form-dates">
+                            <input type="text" placeholder="Check-in" id="checkin" readonly>
+                            <input type="text" placeholder="Check-out" id="checkout" readonly>
+                        </div>
+                        <textarea placeholder="Eventuali richieste speciali o domande..." rows="4"></textarea>
+                        <button type="submit" class="btn-primary">Invia Richiesta di Prenotazione</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Il Tuo B&B | P.IVA 0123456789 | Codice CITRA/CIR: 12345</p>
+    </footer>
+
+    <!-- JS di Flatpickr + Traduzione Italiana -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/it.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

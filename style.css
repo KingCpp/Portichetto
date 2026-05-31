@@ -818,3 +818,122 @@ footer {
 .close-modal:hover {
     color: #38bdf8; /* Diventa azzurra quando ci passi sopra */
 }
+
+/* ==========================================================================
+   BADGE RECENSIONI (BOOKING & GOOGLE)
+   ========================================================================== */
+.trust-badges-section {
+    background-color: #0f172a;
+    padding: 20px 20px 40px 20px; /* Margine inferiore per dare respiro */
+}
+
+.trust-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Su PC i badge si affiancano */
+@media (min-width: 600px) {
+    .trust-container {
+        flex-direction: row;
+        gap: 40px;
+    }
+}
+
+/* Stile base delle card cliccabili */
+.badge-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: #f8fafc;
+    border: 1px solid #334155;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+    max-width: 320px; /* Dimensione compatta ed elegante */
+}
+
+.badge-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Colori al passaggio del mouse per distinguere le piattaforme */
+.booking-badge:hover {
+    border-color: #003580; /* Blu classico Booking */
+}
+
+.google-badge:hover {
+    border-color: #ea4335; /* Rosso Google */
+}
+
+/* Loghi e Brand text */
+.badge-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-badge .brand-name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #38bdf8; /* Azzurro coordinato al nostro sito */
+}
+
+.google-badge .brand-name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #f8fafc;
+}
+
+.stars {
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+/* Zona punteggio */
+.badge-rating {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto; /* Spinge il voto tutto a destra */
+}
+
+/* Il quadratino col numero */
+.badge-rating .score {
+    background: #003580; /* Sfondo blu Booking di base */
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+/* Per google facciamo il quadratino color oro/giallo recensioni */
+.google-badge .score {
+    background: #eab308;
+    color: #0f172a;
+}
+
+/* Testi descrittivi */
+.rating-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-text .status {
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.rating-text .reviews-count {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}

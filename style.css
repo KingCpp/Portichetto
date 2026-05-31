@@ -331,3 +331,490 @@ footer {
         flex: 1; /* Occupano lo stesso spazio (50% ciascuno) */
     }
 }
+/* Struttura della Mega Hero */
+.hero-section {
+    padding: 60px 20px;
+    background-color: #0f172a; /* Sfondo scuro elegante */
+    color: #f8fafc;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr; /* Di base una sola colonna per i cellulari */
+    gap: 40px;
+    align-items: center;
+}
+
+/* Quando lo schermo è grande (PC), dividiamo in 2 colonne */
+@media (min-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr 1fr; /* Testo a sinistra, foto a destra */
+    }
+}
+
+/* Stile dei testi */
+.hero-text-block h1 {
+    font-size: 3rem;
+    color: #38bdf8; /* Un bell'azzurro mare/pescarese */
+    margin-bottom: 10px;
+}
+
+.hero-text-block h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.hero-subtext {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Il bottone per scorrere al calendario */
+.btn-primary {
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 12px 28px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0ea5e9;
+}
+
+/* Il blocco delle 3 foto affiancate */
+.hero-gallery-block {
+    display: flex;
+    gap: 15px;
+    height: 400px; /* Altezza della galleria */
+}
+
+.hero-photo {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: flex 0.5s ease; /* Effetto zoom dinamico quando ci passi sopra */
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Taglia le foto perfettamente senza deformarle */
+}
+
+/* Effetto figo: la foto si allarga leggermente quando l'utente ci passa il mouse */
+.hero-photo:hover {
+    flex: 2;
+}
+
+/* ==========================================================================
+   SEZIONE CALENDARIO E PRENOTAZIONE
+   ========================================================================== */
+
+/* Sfondo scuro per tutta la sezione */
+.bg-dark {
+    background-color: #0f172a;
+    padding: 80px 20px;
+    color: #f8fafc;
+}
+
+/* Container centrale */
+.booking-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.booking-section h2 {
+    font-size: 2.2rem;
+    color: #38bdf8;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.booking-section > p {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+/* Il Wrapper che affianca Calendario e Form */
+.booking-wrapper {
+    display: grid;
+    grid-template-columns: 1fr; /* Una colonna su Mobile */
+    gap: 50px; /* Spazio generoso tra i due blocchi */
+    align-items: start;
+}
+
+/* Su PC diamo il giusto spazio: il calendario occupa il 45%, il form il 55% */
+@media (min-width: 992px) {
+    .booking-wrapper {
+        grid-template-columns: 1.1fr 1.4fr;
+    }
+}
+
+/* Personalizzazione del blocco Flatpickr (Calendario) */
+#calendar-inline {
+    display: flex;
+    justify-content: center;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Forza Flatpickr ad allinearsi perfettamente senza bordi strani */
+.flatpickr-calendar.inline {
+    box-shadow: none !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+/* Stile del Modulo/Form */
+#form-prenotazione {
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Spaziature dei gruppi di campi */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #38bdf8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Input, Textarea e Campi data */
+#form-prenotazione input[type="text"],
+#form-prenotazione input[type="email"],
+#form-prenotazione textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #f8fafc;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Evita che escano dai bordi */
+}
+
+/* Effetto focus quando l'utente clicca per scrivere */
+#form-prenotazione input:focus,
+#form-prenotazione textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+/* Disposizione Check-in e Check-out affiancati */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Stile per i campi di lettura data (Check-in/Out) */
+#form-prenotazione input[readonly] {
+    cursor: not-allowed;
+    background-color: #0f172a;
+    opacity: 0.9;
+}
+
+/* Il Bottone d'invio gigante e moderno */
+.btn-submit {
+    width: 100%;
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #0ea5e9;
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   SEZIONE PREZZI
+   ========================================================================== */
+.prices-section {
+    padding: 80px 20px;
+    background-color: #1e293b; /* Sfondo leggermente più chiaro del total dark per staccare */
+    color: #f8fafc;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.prices-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .prices-grid {
+        grid-template-columns: 1fr 1.2fr; /* Card prezzo a sinistra, vantaggi a destra */
+    }
+}
+
+/* La scheda col prezzo */
+.price-card {
+    background: #0f172a;
+    padding: 40px 30px;
+    border-radius: 16px;
+    border: 2px solid #38bdf8; /* Bordo azzurro per metterla in risalto */
+    position: relative;
+    text-align: center;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.card-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.price-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #cbd5e1;
+}
+
+.price-value {
+    margin-bottom: 20px;
+}
+
+.price-value .from {
+    display: block;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+}
+
+.price-value .amount {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #38bdf8;
+}
+
+.price-value .per-night {
+    font-size: 1rem;
+    color: #94a3b8;
+}
+
+.price-note {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+/* La scheda coi vantaggi */
+.benefits-card h4 {
+    font-size: 1.6rem;
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefits-list li {
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #cbd5e1;
+    display: flex;
+    align-items: flex-start;
+}
+
+.benefits-list .icon {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    margin-top: 20px;
+    background: transparent;
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+/* ==========================================================================
+   SEZIONE GALLERIA FOTOGRAFICA
+   ========================================================================== */
+.gallery-section {
+    padding: 80px 20px;
+    background-color: #0f172a; /* Total dark coordinato */
+}
+
+/* Griglia responsive: 1 colonna su mobile, 2 su tablet, 4 su PC */
+.main-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Singolo contenitore foto */
+.gallery-item {
+    position: relative;
+    height: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Effetto velo scuro e scritta che appaiono al passaggio del mouse */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.7); /* Sfondo scuro semitrasparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-overlay span {
+    color: #38bdf8;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 2px solid #38bdf8;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+/* Animazioni all'Hover */
+.gallery-item:hover img {
+    transform: scale(1.1); /* Zoom leggero della foto */
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1; /* Mostra il velo scuro */
+}
+
+.gallery-item:hover .gallery-overlay span {
+    transform: translateY(0); /* Fai salire la scritta fluidamente */
+}
+
+/* ==========================================================================
+   SISTEMA DI INGRANDIMENTO FOTO (MODAL/LIGHTBOX)
+   ========================================================================== */
+.modal {
+    display: none; /* Nascosto di default */
+    position: fixed;
+    z-index: 9999; /* Sta sopra a qualsiasi altro elemento del sito */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.9); /* Sfondo scuro semitrasparente */
+    align-items: center;
+    justify-content: center;
+}
+
+/* La foto ingrandita */
+.modal-content {
+    max-width: 85%; /* Lascia un margine elegante dai bordi (non è tutto schermo) */
+    max-height: 80vh; /* Non supera l'80% dell'altezza dello schermo */
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    
+    /* Animazione fluida di apertura */
+    animation: zoomFidato 0.3s ease;
+}
+
+@keyframes zoomFidato {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Il tasto per chiudere (la X in alto a destra) */
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #cbd5e1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #38bdf8; /* Diventa azzurra quando ci passi sopra */
+}

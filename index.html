@@ -13,7 +13,7 @@
 
     <!-- 1. HEADER & NAVIGAZIONE (Su mobile diventerà un menu compatto) -->
     <header class="main-header">
-        <a href="#" class="logo">Il Tuo B&B</a>
+        <a href="#" class="logo">Il Portichetto</a>
         <nav class="nav-menu">
             <a href="#appartamento">La Casa</a>
             <a href="#servizi">Servizi</a>
@@ -24,55 +24,107 @@
 
     <main>
         <!-- COPERTINA (HERO SECTION) CON TRE FOTO DI SFONDO -->
-    <section class="hero">
-        <!-- Contenitore delle immagini locali -->
-        <div class="hero-bg">
-            <img src="img/IMG-20250228-WA0055.jpg" alt="Anteprima appartamento 1">
-            <img src="img/IMG-20240410-WA0039.jpg" alt="Anteprima appartamento 2">
-            <img src="img/IMG_20241228_101602.jpg" alt="Anteprima appartamento 3">
-        </div>
-        
-        <!-- Filtro scuro per rendere il testo leggibile sopra le foto -->
-        <div class="hero-overlay"></div>
-        
-        <!-- Testo sopra lo sfondo -->
-        <div class="hero-content">
-            <h1>Il tuo rifugio nel cuore di Pescara</h1>
-            <p>Un appartamento moderno e accogliente, pensato per farti sentire a casa.</p>
-            <a href="#prenota" class="btn-primary">Vedi Disponibilità</a>
+    <section class="hero-section">
+        <div class="hero-container">
+            
+            <div id="appartamento" class="hero-text-block">
+                <h1>B&B Il Portichetto</h1>
+                <h2>Il comfort di un appartamento moderno, il calore di una vera accoglienza a Pescara.</h2>
+                <p class="hero-subtext">
+                    A soli 5 minuti a piedi dal centro storico, troverai un ambiente accogliente, funzionale e pulitissimo, dotato di parcheggio privato, Wi-Fi e aria condizionata. 
+                    Ma il nostro vero punto di forza è <strong>Francesca</strong>: la sua solarità e la sua cura ti faranno sentire a casa.
+                </p>
+                <a href="#calendar-inline" class="btn-primary">Verifica Disponibilità</a>
+            </div>
+
+            <div class="hero-gallery-block">
+                <div class="hero-photo img-1">
+                    <img src="img/IMG-20250228-WA0055.jpg" alt="Soggiorno moderno Il Portichetto">
+                </div>
+                <div class="hero-photo img-2">
+                    <img src="img/IMG-20240410-WA0039.jpg" alt="Camera da letto accogliente">
+                </div>
+                <div class="hero-photo img-3">
+                    <img src="img/IMG_20241228_101602.jpg" alt="Dettaglio struttura o esterno">
+                </div>
+            </div>
+
         </div>
     </section>
 
         <!-- 3. L'APPARTAMENTO & DETTAGLI -->
-        <section id="appartamento" class="container">
-            <h2>L'Appartamento</h2>
-            <p class="subtitle">Spazi luminosi, comfort moderni e cura nei dettagli.</p>
-            
-            <div class="features-grid">
-                <div class="feature-item"><strong>Ospiti:</strong> Fino a 4 persone</div>
-                <div class="feature-item"><strong>Spazio:</strong> 65 mq</div>
-                <div class="feature-item"><strong>Camere:</strong> 1 Matrimoniale + Divano Letto</div>
-            </div>
+        <section id="servizi" class="features-section">
+            <div class="container">
+                <h3 class="section-title">Perché scegliere Il Portichetto?</h3>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">☀️</span>
+                        <h4>Ospitalità del Cuore</h4>
+                        <p>Come dicono le nostre migliori recensioni, l'accoglienza di Francesca è il nostro marchio di fabbrica. Attenta, solare e mai invadente.</p>
+                    </div>
 
-            <div class="gallery-placeholder">
-                <!-- Qui inseriremo i tag <img> reali -->
-                <div class="photo-card">Foto 1 - Soggiorno</div>
-                <div class="photo-card">Foto 2 - Camera</div>
-                <div class="photo-card">Foto 3 - Bagno</div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🚗</span>
+                        <h4>Parcheggio Privato Interno</h4>
+                        <p>Dimentica lo stress delle strisce blu. Il Portichetto offre un comodissimo posto auto riservato e sicuro sul retro della struttura.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <span class="feature-icon">📍</span>
+                        <h4>Posizione Strategica</h4>
+                        <p>Situato in una zona tranquilla e riservata, ma a soli 5 minuti a piedi dal centro storico e vicinissimo a tutti i principali servizi della città.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <span class="feature-icon">❄️</span>
+                        <h4>Comfort Moderno & Top Clean</h4>
+                        <p>Ambienti climatizzati, Wi-Fi ultraveloce gratuito, ingresso indipendente e un livello di pulizia impeccabile certificato dai nostri ospiti.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 4. I SERVIZI INCLUSI -->
-        <section id="servizi" class="bg-light">
+        <section id="appartamento" class="gallery-section">
             <div class="container">
-                <h2>I Servizi Inclusi</h2>
-                <div class="services-grid">
-                    <div class="service-card">🌐 Wi-Fi Fibra</div>
-                    <div class="service-card">❄️ Aria Condizionata</div>
-                    <div class="service-card">☕ Macchina Caffè</div>
-                    <div class="service-card">🍳 Cucina Attrezzata</div>
-                    <div class="service-card">🧼 Lenzuola e Asciugamani</div>
-                    <div class="service-card">📺 Smart TV</div>
+                <h3 class="section-title">Esplora Il Portichetto</h3>
+                <p class="section-subtitle">Ogni angolo è pensato per offrirti il massimo del comfort e della funzionalità durante il tuo soggiorno.</p>
+                
+                <div class="main-gallery-grid">
+                    <div class="gallery-item">
+                        <img src="img/IMG-20240410-WA0057.jpg" alt="cucina attrezzata">
+                        <div class="gallery-overlay"><span>Cucina</span></div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="img/IMG-20250228-WA0055.jpg" alt="Camera da letto matrimoniale">
+                        <div class="gallery-overlay"><span>Camera Matrimoniale + 2 singoli</span></div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="img/IMG_20240401_223243_030.jpg" alt="Bagno moderno e pulitissimo">
+                        <div class="gallery-overlay"><span>Bagno moderno e pulitissimo</span></div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/IMG_20240401_223243_082.jpg" alt="Il Portichetto">
+                        <div class="gallery-overlay"><span>Il Portichetto</span></div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/IMG-20240410-WA0051.jpg" alt="Zona Giorno">
+                        <div class="gallery-overlay"><span>Zona Giorno</span></div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="img/IMG_20241228_101602.jpg" alt="Ingresso indipendente e portico esterno">
+                        <div class="gallery-overlay"><span>Vista dal Portichetto</span></div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/IMG-20240410-WA0074.jpg" alt="Zona Studio">
+                        <div class="gallery-overlay"><span>Zona Studio</span></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -80,12 +132,46 @@
         <!-- 5. POSIZIONE -->
         <section id="posizione" class="container">
             <h2>Dove Siamo</h2>
-            <p>Ci troviamo in Via Roma 12, in una zona tranquilla ma strategica.</p>
+            <p>Ci troviamo in Via Aterno 29, in una zona tranquilla ma strategica.</p>
             <ul>
                 <li>🚶‍♂️ 5 minuti a piedi dal centro storico</li>
                 <li>Directions 🚌 Fermata dell'autobus a 50 metri</li>
-                <li>🛒 Supermercato aperto 24/7 girato l'angolo</li>
+                <li>🛒 Supermercati e negozi dietro l'angolo</li>
             </ul>
+        </section>
+
+        <!-- 4. SEZIONE PREZZI E VANTAGGI DIRECT -->
+        <section id="tariffe" class="prices-section">
+            <div class="container">
+                <h3 class="section-title">Trasparenza nel Prezzo</h3>
+                <p class="section-subtitle">Nessuna commissione di intermediazione. Prenotando qui ricevi sempre la miglior tariffa garantita.</p>
+                
+                <div class="prices-grid">
+                    <!-- Card Prezzo Trasparente -->
+                    <div class="price-card central-card">
+                        <div class="card-badge">Miglior Prezzo Garantito</div>
+                        <h4>Soggiorno al Portichetto</h4>
+                        <div class="price-value">
+                            <span class="from">a partire da</span>
+                            <span class="amount">60€</span>
+                            <span class="per-night">/ a notte</span>
+                        </div>
+                        <p class="price-note">*La tariffa può variare in base alla stagionalità (alta/bassa stagione) e al numero di ospiti.</p>
+                        <a href="#prenota" class="btn-secondary">Calcola il tuo preventivo</a>
+                    </div>
+
+                    <!-- Card Vantaggi della Prenotazione Diretta -->
+                    <div class="benefits-card">
+                        <h4>Perché conviene prenotare qui?</h4>
+                        <ul class="benefits-list">
+                            <li><span class="icon">✅</span> <strong>Risparmio del 10-15%:</strong> Eviti le commissioni dei grandi portali online.</li>
+                            <li><span class="icon">🍹</span> <strong>Un piccolo omaggio di benvenuto:</strong> Troverai una sorpresa ad accoglierti preparata da Francesca.</li>
+                            <li><span class="icon">💬</span> <strong>Contatto Diretto:</strong> Parli subito con noi per qualsiasi esigenza o cambio di programma.</li>
+                            <li><span class="icon">🔒</span> <strong>Nessun pagamento anticipato:</strong> Definiamo le modalità d'accordo via email, in totale flessibilità.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- 6. CALENDARIO E FORM DI PRENOTAZIONE -->
@@ -100,16 +186,50 @@
                     <div id="calendar-inline"></div>
 
                     <!-- Modulo di contatto -->
-                    <form id="request-form">
-                        <input type="text" placeholder="Il tuo Nome" required>
-                        <input type="email" placeholder="La tua Email" required>
-                        <div class="form-dates">
-                            <input type="text" placeholder="Check-in" id="checkin" readonly>
-                            <input type="text" placeholder="Check-out" id="checkout" readonly>
-                        </div>
-                        <textarea placeholder="Eventuali richieste speciali o domande..." rows="4"></textarea>
-                        <button type="submit" class="btn-primary">Invia Richiesta di Prenotazione</button>
-                    </form>
+            <form action="https://api.web3forms.com/submit" method="POST" id="form-prenotazione">
+
+                <input type="hidden" name="access_key" value="5b0fbd16-c0d2-46b3-8170-0feff8617cba">
+                
+                <input type="hidden" name="subject" value="Nuova richiesta di prenotazione dal sito Il Portichetto">
+
+                <div class="form-group">
+                    <label for="nome">Nome e Cognome</label>
+                    <input type="text" name="nome" id="nome" required placeholder="Mario Rossi">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Tua Email</label>
+                    <input type="email" name="email" id="email" required placeholder="mario@example.com">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkin">Data Check-in</label>
+                        <input type="text" name="checkin" id="checkin" readonly required placeholder="Seleziona dal calendario">
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout">Data Check-out</label>
+                        <input type="text" name="checkout" id="checkout" readonly required placeholder="Seleziona dal calendario">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="messaggio">Note speciali o richieste</label>
+                    <textarea name="messaggio" id="messaggio" rows="4" placeholder="Hai bambini? Animali? Esigenze particolari? Scrivicelo qui..."></textarea>
+                </div>
+                
+                <!-- NOTA SUI PAGAMENTI E CANCELLAZIONE -->
+                <div class="form-policy-note" style="margin-bottom: 20px; font-size: 0.85rem; color: #94a3b8; line-height: 1.4;">
+                    <p>ℹ️ <strong>Come funziona la prenotazione?</strong></p>
+                    <ul style="padding-left: 20px; margin: 5px 0;">
+                        <li>Inviando questo modulo riceverai un preventivo personalizzato via email entro poche ore.</li>
+                        <li>A conferma della prenotazione è richiesto un acconto del 30% da versare tramite <strong>link di pagamento sicuro (Carta di Credito, Apple Pay, Google Pay)</strong>.</li>
+                        <li><strong>Cancellazione Flessibile:</strong> Rimborso totale dell'acconto in caso di cancellazione fino a 14 giorni prima della data di arrivo.</li>
+                    </ul>
+                </div>
+                
+                <button type="submit" class="btn-submit">Invia Richiesta di Prenotazione</button>
+            </form>
                 </div>
             </div>
         </section>
@@ -117,12 +237,18 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Il Tuo B&B | P.IVA 0123456789 | Codice CITRA/CIR: 12345</p>
+        <p>&copy; 2026 B&B Il Portichetto | Via Aterno 29, Pescara | Codice CITRA/CIR: 12345</p>
     </footer>
 
     <!-- JS di Flatpickr + Traduzione Italiana -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/it.js"></script>
     <script src="app.js"></script>
+
+    <!-- CORNICE POP-UP PER INGRANDIMENTO FOTO (LIGHTBOX) -->
+    <div id="gallery-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img" src="" alt="">
+    </div>
 </body>
 </html>

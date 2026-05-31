@@ -36,3 +36,39 @@ async function inizializzaCalendario() {
 
 // Avvia la funzione al caricamento della pagina
 inizializzaCalendario();
+
+// ==========================================================================
+// GESTIONE INGRANDIMENTO FOTO GALLERIA (VERSIONE SICURA)
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const modal = document.getElementById('gallery-modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeModal = document.querySelector('.close-modal');
+
+    // Controlliamo che gli elementi esistano davvero nella pagina
+    if (galleryItems.length > 0 && modal && modalImg && closeModal) {
+        
+        // Quando clicchi su una foto
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgInside = item.querySelector('img');
+                modal.style.display = 'flex'; // Mostra il pop-up centrato
+                modalImg.src = imgInside.src; // Copia la foto dentro il pop-up
+                modalImg.alt = imgInside.alt;
+            });
+        });
+
+        // Chiudi il pop-up quando clicchi sulla "X"
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Chiudi anche se clicchi sullo sfondo scuro
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+});

@@ -937,3 +937,62 @@ footer {
     font-size: 0.75rem;
     color: #94a3b8;
 }
+
+/* --- STILI SEZIONE POSIZIONE & MAPPA --- */
+#posizione {
+    padding: 60px 20px;
+}
+
+.posizione-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.posizione-info h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #1e293b; /* Colore scuro elegante in linea con il sito */
+}
+
+.posizione-sub {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.posizione-list {
+    list-style: none;
+    padding: 0;
+}
+
+.posizione-list li {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #334155;
+}
+
+.posizione-list li span {
+    font-size: 1.3rem;
+}
+
+.posizione-map {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* RESPONSIVE: Da tablet/computer in su, affianca testo e mappa */
+@media (min-width: 768px) {
+    .posizione-wrapper {
+        flex-direction: row;
+        align-items: center;
+        gap: 60px;
+    }
+    
+    .posizione-info, .posizione-map {
+        flex: 1; /* Divide lo spazio a metà esatta */
+    }
+}

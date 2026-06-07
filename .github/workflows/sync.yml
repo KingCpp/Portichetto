@@ -2,7 +2,7 @@ name: Sincronizzazione Calendario Booking
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # Gira automaticamente ogni 30 minuti
+    - cron: '0 * * * *' # Gira automaticamente ogni ora (puoi modificare la frequenza a tuo piacimento)
   workflow_dispatch:      # Ti permette di lanciare lo script a mano da GitHub se hai fretta
 
 jobs:

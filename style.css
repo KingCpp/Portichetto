@@ -284,6 +284,76 @@ footer {
     text-align: center;
     padding: 2rem 1.5rem;
     font-size: 0.85rem;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-copy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    color: #64748b;
+}
+
+.footer-copy strong {
+    color: #94a3b8;
+}
+
+.footer-cir {
+    font-size: 0.78rem;
+    color: #475569;
+    border-left: 1px solid #334155;
+    padding-left: 10px;
+    margin-left: 4px;
+}
+
+.footer-dev {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    color: #475569;
+}
+
+.footer-dev strong {
+    color: #7dd3fc;
+}
+
+.footer-heart {
+    width: 13px;
+    height: 13px;
+    color: #e11d48;
+    flex-shrink: 0;
+    animation: heartbeat 1.8s ease infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1);   }
+    14%       { transform: scale(1.25); }
+    28%       { transform: scale(1);   }
+    42%       { transform: scale(1.15); }
+    56%       { transform: scale(1);   }
+}
+
+@media (min-width: 640px) {
+    .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .footer-copy {
+        text-align: left;
+    }
 }
 
 /* ==========================================================================
@@ -994,5 +1064,88 @@ footer {
     
     .posizione-info, .posizione-map {
         flex: 1; /* Divide lo spazio a metà esatta */
+    }
+}
+
+/* ==========================================================================
+   CONTATTO ALTERNATIVO – sotto il form di prenotazione
+   ========================================================================== */
+
+.contact-alt {
+    margin-top: 32px;
+    padding-top: 8px;
+}
+
+.contact-alt-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    color: #64748b;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.contact-alt-divider::before,
+.contact-alt-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #334155;
+}
+
+.contact-alt-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.contact-alt-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    flex: 1;
+    min-width: 200px;
+    justify-content: center;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    border: 1px solid transparent;
+}
+
+.contact-alt-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.contact-alt-wa {
+    background: #1a3a2a;
+    color: #4ade80;
+    border-color: #25d36622;
+}
+
+.contact-alt-wa:hover {
+    background: #1e4a33;
+    color: #4ade80;
+}
+
+.contact-alt-email {
+    background: #1e2d45;
+    color: #93c5fd;
+    border-color: #38bdf822;
+}
+
+.contact-alt-email:hover {
+    background: #1e3557;
+    color: #93c5fd;
+}
+
+@media (max-width: 480px) {
+    .contact-alt-btn {
+        flex: 1 1 100%;
     }
 }

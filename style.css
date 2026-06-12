@@ -1149,3 +1149,43 @@ footer {
         flex: 1 1 100%;
     }
 }
+
+/* Social icons – footer */
+.footer-social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+ 
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #1e293b;
+    color: #64748b;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+ 
+.footer-social-link:hover {
+    transform: translateY(-2px);
+}
+ 
+.footer-social-link:nth-child(1):hover {
+    background: #1877f2;
+    color: #fff;
+}
+ 
+.footer-social-link:nth-child(2):hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: #fff;
+}
+ 
+@media (max-width: 639px) {
+    .footer-social {
+        justify-content: center;
+    }
+}

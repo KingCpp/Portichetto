@@ -1,9 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://www.ilportichetto.com/</loc>
-        <lastmod>2026-06-07</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
+ 
+  <!-- Homepage (pagina principale) -->
+  <url>
+    <loc>https://www.ilportichetto.com/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+ 
+  <!-- Sezione: Servizi -->
+  <url>
+    <loc>https://www.ilportichetto.com/#servizi</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+ 
+  <!-- Sezione: Galleria appartamento -->
+  <url>
+    <loc>https://www.ilportichetto.com/#appartamento</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+ 
+  <!-- Sezione: Posizione -->
+  <url>
+    <loc>https://www.ilportichetto.com/#posizione</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+ 
+  <!-- Sezione: Tariffe -->
+  <url>
+    <loc>https://www.ilportichetto.com/#tariffe</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+ 
+  <!-- Sezione: Prenota -->
+  <url>
+    <loc>https://www.ilportichetto.com/#prenota</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+ 
 </urlset>

@@ -2,7 +2,9 @@
 async function inizializzaCalendario() {
     try {
         // Carica il file JSON generato da Python
-        const response = await fetch('dates.json');
+        // NUOVA RIGA:
+        const response = await fetch('https://raw.githubusercontent.com/KingCpp/Portichetto/main/dates.json?v=' + Date.now(), 
+                                     {cache: 'no-store'});
         
         // Se il file non esiste ancora (es. primo avvio), usiamo un array vuoto
         const dateOccupate = response.ok ? await response.json() : [];

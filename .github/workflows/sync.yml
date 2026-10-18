@@ -38,4 +38,4 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add dates.json
-        git diff --quiet && git diff --staged --quiet || (git commit -m "auto: aggiornamento date calendario" && git push)
+        git diff --quiet && git diff --staged --quiet || (git commit -m "auto: aggiornamento date calendario [skip netlify]" && git push)
